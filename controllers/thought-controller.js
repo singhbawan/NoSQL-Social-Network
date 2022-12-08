@@ -2,7 +2,7 @@ const { Thought, User} = require('../model/index');
 
 const thoughtController ={
     //add thought to user
-    async addThought({params,body}, res){
+    async addThought({body}, res){
         try{
             const { _id} = await Thought.create(body)
 
@@ -15,7 +15,7 @@ const thoughtController ={
             const user = await User.findOneAndUpdate(
                {_id: body.userId},
                {$push: {thoughts: _id}},
-               {new: true}
+               {new: true, runValidators: true}
             )
 
             if(!user){
