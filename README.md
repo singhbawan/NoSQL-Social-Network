@@ -35,7 +35,7 @@ singhbawan: https://github.com/singhbawan
 * Mongoose
 
 ## Screenshot
-
+<img src = './images/Capture.JPG' alt = 'image' width = '700' height = '300' style = 'border:3px solid black'>
 
 
 ## Walkthrough link
